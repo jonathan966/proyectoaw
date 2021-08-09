@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<tittle> Viernes, 28 de mayo de 2021 Tulancingo de Bravo Hgo.</tittle>
+    <meta charset="utf-8">
+    <style>
+
+        section article{
+            width: 300px;
+            height: 300px;
+            float: left;
+            /*border: 1px solid white;*/
+        
+            position: relative;
+            margin: 4px;
+            transform: scale(1,1);
+            z-index: 1;
+            transition: all 1s;
+        }
+         section article img{
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        section article p{
+            position: absolute;
+            padding: 40px;
+        }
+        
+        .aumentado{
+            z-index: 500;
+            transform: scale(1.3,1.3);
+            border: 1px solid white;
+            box-shadow: 0px 0px 15px 0px yellow;
+        }
+        section{
+            padding-top: 50px;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+
+        }
+        section .ribbon{
+            width: 4000px;
+            position: relative;
+            left: 0px;
+            transition: all 1s;
+        }
+        .botonredondo{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background: rgb(220,220,220);
+            color: rgb(50,50,50);
+            font-size: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            position: absolute;
+        }
+        .botones{
+            width: 100%;
+            position: absolute;
+            z-index: 1000; /*para traer los botones al frente*/
+        }
+        .anterior{
+            top: 100px;
+            transform: rotate(180deg);
+        }
+        .posterior{
+            right: 20px;
+            top: 100px;
+        }
+    </style>
+    <div class="clearfix"></div>
+
+
+    <script src="lib/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        var desfase = 0; //esto lo hago al final de poner el .ribbon.css
+        $(document).ready(function(){
+            $("section article").hover (function(){
+            $(this).addClass("aumentado")   
+            })
+            $("section article").mouseout (function(){
+            $(this).removeClass("aumentado")    
+            })
+            $(".anterior").click (function(){
+                //console.log("Izquierdo"); primero lo pruebo asi y despues modifico en el ribbon:position,left, transition.
+                desfase--;
+                $(".ribbon").css("left",(desfase*200)+"px")
+            })
+            $(".posterior").click (function(){
+                //console.log("Derecho");
+                desfase++;
+                //$(".ribbon").css("left","200px")
+                $(".ribbon").css("left",(desfase*200)+"px")
+            })
+        })
+    </script>
+    <div class="clearfix"></div>
+	<!--comentario-->
+	<meta charset="utf-8">
+	<meta name="description" content="págia de tecnología- Estudiante de la carrera Tic´s">
+	<link rel="stylesheet" type="text/css" href="mis_estilos.css">	
+  </head>
+    <body>
+	 <h1 id="01"> Shell Quality Tecno Plus </h1> 
+
+	  <img src=" img001/logo.jpg" style="width: 150PX;">
+    </body>
+
+    <header>
+	
+	    <nav>
+		    <ul>
+		       <li><a href="index.html">Inicio<a/></li>
+		       <li><a href="artículos.html">Articulos<a/></li></li>
+		       <li> <a href="destacados.html">Destacados<a/></li>
+		       <li> <a href="Consulta o servicio.html">Consulta o servicio<a/></li></li>
+                <li><a href="index.php">Registro<a/></li>
+	        </ul>
+	    </nav>
+	   <div class="clearfix"></div>
+    </header>>
+    <main>
+	  <h3>Mejores celular 2021</h3>
+            <h5>Samsung Galaxy S21 Ultra</h5>
+            <p>
+             Creemos que el S21 Ultra es una opción fantástica con una de los mejores módulos fotográficos, una potencia fenomenal, una gran duración de la batería, un diseño sólido y una gran cantidad de otras características excelentes. El Galaxy S21 Ultra no es un teléfono barato a pesar de ser más barato que su predecesor, pero si estás buscando la mejor experiencia de teléfono celular en 2021, no tiene rival.
+            </p>
+            <img src="img001/Samsung-Galaxy-S21-Ultra-5G-500x500.jpg" style="width: 100PX;">
+        
+    
+
+        <h3>Nuevo smartphone de Xiaomi</h3>
+        <article>
+            <h5>Redmi Note 10 pro</h5>
+            <p>
+                La empresa china Xiaomi presentó recientemente el nuevo Redmi Note 10 Pro, su celular de gama media insignia para la primera mitad de 2021.
+                Este nuevo modelo llega en tres variantes: una versión de 6 GB de RAM y 64 GB y otra de 6 GB de RAM y 128 GB de almacenamiento interno. Ahora bien, la versión más fuerte tiene 8 GB de RAM y 128 GB de almacenamiento interno.
+            </p>
+            <img src="img001/Note10Pro7272.jpg" style="width: 200PX;">  
+    <section id= "tabla_com">
+    	Tabla comparativa:
+        Samsung Galaxy S21 Ultra vs Redmi Note 10 pro
+        <table border="1">
+        	<t1r>
+        		<th>Nombre del dispositivo</th> 
+        	    <th>Procesador</th>
+        	    <th>Pantalla</th> 
+        	    <th>Memoria RAM</th>
+        	    <th>Almacenamiento</th>
+        	    <th>Sistema operativo</th>
+        	    <th>Bateria</th>
+        	    <th>Cámaras</th>
+        	    <th>Precio</th>
+        	</tr>
+
+        	<tr>
+        	   <th>Samsung Galaxy S21</th>  
+        	   <th>Exynos 2100 5nm</th>
+        	   <th> 6.8", 1440 x 3200 pixels</th> 
+        	   <th>12GB/16GB</th>
+        	   <th>128/256/512GB</th>
+        	   <th>Android 11</th>
+        	   <th>5000 mAh</th>
+        	   <th>Cuádruple, 108MP+8MP +5MP+2MP</th>
+        	   <th>24,955 MX</th>
+        	 
+
+        	</tr>
+
+        	<tr>
+        		<th> Redmi Note 10 pro </th>  
+        	    <th> Snapdragon 732G 2.3GHz </th> 
+        	    <th> 6.67", 1080 x 2400 pixels </th> 
+        	    <th>6GB/8GB</th>   
+        	    <th>64GB/128GB</th>
+        	    <th>Android 11</th>
+        	    <th>5020 mAh</th>
+        	    <th>Cuádruple, 108MP+8MP +5MP+2MP</th>
+        	    <th>5,570 MX</th>
+        	</tr>
+        </table>
+    </section>
+
+    <div class="clearfix"></div>
+
+    </section>
+        
+        <div id="container">
+            <section>
+                <div class="botones">
+                    <div class="botonredondo anterior">
+                        >   
+                    </div>
+                    <div class="botonredondo posterior">
+                        >
+                    </div>
+                </div>
+                <div class="ribbon">    
+                    
+                        <article class="art">
+                            <div class="contenido">
+                                <img src="img001/f52.jpg" >
+                                <h3>Título</h3>
+                                <h4>Descripción</h4>
+                                <p> Samsung Galaxy F52 5G: cerebro Qualcomm, carga rápida y 64 megapíxeles para la última gama media Android</p>
+                            </div>
+                        </article>
+                        <article class="art">
+                            <div class="contenido">
+                                <img src="img001/reno.jpg">
+                                <h3>Título</h3>
+                                <h4>Descripción</h4>
+                                <p>Oppo reno 5;panel AMOLED, cámara cuádruple y carga rápida en un nuevo móvil 5G de gama media</p>
+                            </div>
+                        </article>
+                        <article class="art">
+                            <div class="contenido">
+                                <img src="img001/apple12.jpg">
+                                <h3>Título</h3>
+                                <h4>Descripción</h4>
+                                <p> Iphone 12 pro max; Fotos con poca luz. Ceramic Shield. Escáner LiDAR. Pantalla Super Retina XDR. Retratos con modo Noche. Grabación en Dolby Vision. Chip A14 Bionic. </p>
+                        
+                            </div>
+                        </article>
+                        <article class="art">
+                            <div class="contenido">
+                                <img src="img001/images_1.jpg">
+                                <h3>Título</h3>
+                                <h4>Descripción</h4>
+                                <p>Poco x3 pro ;Se trata de una evolución del POCO X3 NFC, centrada en apariencia en dar un salto a nivel de rendimiento al dejar atrás la serie 700 de Qualcomm. </p>   
+                            </div>
+                        </article>
+                    </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+	   <h4>(c) 2021 Jonathan Granillo Robledo</h4> 
+    </footer>
+</html>
